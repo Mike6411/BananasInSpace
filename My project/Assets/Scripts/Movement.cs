@@ -22,16 +22,16 @@ public class Movement : MonoBehaviour
     private void LateUpdate()
     {
 
-        //Calcular direccion XZ
-        Vector3 direction = Quaternion.Euler(0f, cam.transform.eulerAngles.y, 0f) * new Vector3 (Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
+        //Calcular direccion XZ 
+        Vector3 direction = Quaternion.Euler(0f, cam.transform.eulerAngles.y, 0f) * new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
 
-        //Calcular velocidad XZ
+        //Calcular velocidad XZ 
         finalVelocity.x = direction.x * velocityXZ;
         finalVelocity.z = direction.z * velocityXZ;
 
         controller.Move(finalVelocity * Time.deltaTime);
 
-    
+
     }
 
 }
