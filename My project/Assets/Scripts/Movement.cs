@@ -4,21 +4,40 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    [SerializeField]
-    public float speed = 10f;
-    Rigidbody rb;
+	private Animator anim;
+	private CharacterController controller;
 
-    void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-    }
+	public float speed = 600.0f;
+	public float turnSpeed = 400.0f;
+	private Vector3 moveDirection = Vector3.zero;
+	public float gravity = 20.0f;
 
-    void Update()
-    {
-        float xMove = Input.GetAxisRaw("Horizontal");
-        float zMove = Input.GetAxisRaw("Vertical");
-        rb.velocity = new Vector3(xMove, rb.velocity.y, zMove) * speed;
+	void Start()
+	{
+		controller = GetComponent<CharacterController>();
+		anim = gameObject.GetComponentInChildren<Animator>();
+	}
 
-    }
+	void Update()
+	{
+		if (Input.GetKey("w"))
+		{
+			anim.SetInteger("AnimationPar", 1);
+		}
+		else
+		{
+			anim.SetInteger("AnimationPar", 0);
+		}
+
+		if (controller.isGrounded)
+		{
+			moveDirection = transform.forward * Input.GetAxis("Vertical") * speed;
+		}
+
+		float turn = Input.GetAxis("Horizontal");
+		transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
+		controller.Move(moveDirection * Time.deltaTime);
+		moveDirection.y -= gravity * Time.deltaTime;
+	}
 }
 
