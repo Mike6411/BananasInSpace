@@ -7,10 +7,26 @@ public class Movement : MonoBehaviour
 	private Animator anim;
 	private CharacterController controller;
 
-	public float speed = 600.0f;
-	public float turnSpeed = 400.0f;
+    [SerializeField]
+	float speed = 600.0f;
+
+    [SerializeField]
+	float turnSpeed = 400.0f;
+
+	[SerializeField]
+	bool grounded;
+
+	[SerializeField]
+	float jumpHeight;
+
+	[SerializeField]
+	float sprintMultiplier;
+
+	/*[SerializeField]
+	float gravityMultiplier = 1f;*/
+
 	private Vector3 moveDirection = Vector3.zero;
-	public float gravity = 20.0f;
+	float gravity = 5f;
 
 	void Start()
 	{
@@ -20,6 +36,18 @@ public class Movement : MonoBehaviour
 
 	void Update()
 	{
+		/*Grounded Checks*/
+		if (controller.isGrounded)
+		{
+			grounded = true;
+			moveDirection = transform.forward * Input.GetAxis("Vertical") * speed;
+        }
+		if (controller.isGrounded == false)
+		{
+			grounded = false;
+		}
+
+		/*Anim Checks*/
 		if (Input.GetKey("w"))
 		{
 			anim.SetInteger("AnimationPar", 1);
@@ -27,11 +55,25 @@ public class Movement : MonoBehaviour
 		else
 		{
 			anim.SetInteger("AnimationPar", 0);
+			sprintMultiplier = 1;
+		}
+		if (Input.GetKey("left shift"))
+		{
+			anim.SetInteger("AnimationPar", 2);
+			sprintMultiplier = 2;
+		}
+		if (Input.GetKeyDown("space"))
+		{
+			Debug.Log("Saltito");
+			//anim.SetInteger("AnimationPar", 3);
+			moveDirection.y = jumpHeight;
 		}
 
-		if (controller.isGrounded)
+
+		/*apply speed forward*/
+		if (grounded)
 		{
-			moveDirection = transform.forward * Input.GetAxis("Vertical") * speed;
+			moveDirection = transform.forward * Input.GetAxis("Vertical") * speed * sprintMultiplier;
 		}
 
 		float turn = Input.GetAxis("Horizontal");

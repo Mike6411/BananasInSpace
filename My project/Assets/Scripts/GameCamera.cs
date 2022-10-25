@@ -5,28 +5,33 @@ using UnityEngine;
 public class GameCamera : MonoBehaviour
 {
 
-[SerializeField]
-private GameObject target;
+    [SerializeField]
+    private GameObject target;
+    
+    [SerializeField]
+    private float targetDistance;
+    
+    [SerializeField]
+    private float cameraLerp;
 
-[SerializeField]
-private float targetDistance;
 
-[SerializeField]
-private float cameraLerp; //12f 
+    float cameraMaxConstraint = 70f;
+    float cameraMinConstraint = 30f;
 
-private float rotationX;
-private float rotationY;
+    private float rotationX;
+    private float rotationY;
 
-private void LateUpdate()
-{
-    rotationX += Input.GetAxis("Mouse Y");
-    rotationY += Input.GetAxis("Mouse X");
+    private void LateUpdate()
+    {
+        rotationX += Input.GetAxis("Mouse Y");
+        rotationY += Input.GetAxis("Mouse X");
+    
+        rotationX = Mathf.Clamp(rotationX, cameraMinConstraint, cameraMaxConstraint);
 
-    rotationX = Mathf.Clamp(rotationX, -50f, 50f);
 
-    transform.eulerAngles = new Vector3(rotationX, rotationY , 0);
-
-    transform.position = Vector3.Lerp(transform.position, target.transform.position - transform.forward * targetDistance, cameraLerp * Time.deltaTime);
-}
+        transform.eulerAngles = new Vector3(rotationX, rotationY , 0);
+    
+        transform.position = Vector3.Lerp(transform.position, target.transform.position - transform.forward * targetDistance, cameraLerp * Time.deltaTime);
+    }
 
 }
