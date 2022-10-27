@@ -26,7 +26,7 @@ public class Movement : MonoBehaviour
 	float gravityMultiplier = 1f;*/
 
 	private Vector3 moveDirection = Vector3.zero;
-	float gravity = 5f;
+	float gravity = 9.81f;
 
 	void Start()
 	{
@@ -62,11 +62,15 @@ public class Movement : MonoBehaviour
 			anim.SetInteger("AnimationPar", 2);
 			sprintMultiplier = 2;
 		}
-		if (Input.GetKeyDown("space"))
+		if (Input.GetKey("space"))
 		{
 			Debug.Log("Saltito");
-			//anim.SetInteger("AnimationPar", 3);
-			moveDirection.y = jumpHeight;
+            //anim.SetInteger("AnimationPar", 3);
+            if (grounded)
+            {
+				moveDirection.y += Mathf.Sqrt(jumpHeight * -1.0f * gravity);
+            }
+
 		}
 
 
@@ -79,7 +83,7 @@ public class Movement : MonoBehaviour
 		float turn = Input.GetAxis("Horizontal");
 		transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
 		controller.Move(moveDirection * Time.deltaTime);
-		moveDirection.y -= gravity * Time.deltaTime;
+		moveDirection.y += gravity * Time.deltaTime;
 	}
 }
 
