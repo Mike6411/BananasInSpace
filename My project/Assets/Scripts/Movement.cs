@@ -83,7 +83,7 @@ public class Movement : MonoBehaviour
 		float turn = Input.GetAxis("Horizontal");
 		transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
 		controller.Move(moveDirection * Time.deltaTime);
-		moveDirection.y += gravity * Time.deltaTime;
+		moveDirection.y -= gravity * Time.deltaTime;
 	}
 }
 
