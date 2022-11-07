@@ -8,7 +8,10 @@ public class Movement : MonoBehaviour
 	private CharacterController controller;
 
     [SerializeField]
-	float speed = 600.0f;
+	float maxSpeed = 5.0f;
+
+	[SerializeField]
+	float zeroToMax = 0.5f;
 
     [SerializeField]
 	float turnSpeed = 400.0f;
@@ -27,20 +30,38 @@ public class Movement : MonoBehaviour
 
 	private Vector3 moveDirection = Vector3.zero;
 	float gravity = 9.81f;
+	float accelPerSec;
+	float currentSpeed;
+	bool isMoving;
 
 	void Start()
 	{
+		accelPerSec = maxSpeed / zeroToMax;
 		controller = GetComponent<CharacterController>();
 		anim = gameObject.GetComponentInChildren<Animator>();
 	}
 
 	void Update()
 	{
+		setSpeed();
+
+		//Debug.Log(currentSpeed);
+
+        /*Movement Checks*/
+        if (Input.GetAxis("Vertical") != 0)
+        {
+			isMoving = true;
+        }
+		else
+        {
+			isMoving = false;
+        }
+
 		/*Grounded Checks*/
 		if (controller.isGrounded)
 		{
 			grounded = true;
-			moveDirection = transform.forward * Input.GetAxis("Vertical") * speed;
+			moveDirection = transform.forward * Input.GetAxis("Vertical") * currentSpeed;
         }
 		if (controller.isGrounded == false)
 		{
@@ -55,13 +76,16 @@ public class Movement : MonoBehaviour
 		else
 		{
 			anim.SetInteger("AnimationPar", 0);
-			sprintMultiplier = 1;
 		}
 		if (Input.GetKey("left shift"))
 		{
 			anim.SetInteger("AnimationPar", 2);
 			sprintMultiplier = 2;
-		}
+		}else
+        {
+			sprintMultiplier = 1;
+        }
+
 		if (Input.GetKey("space"))
 		{
 			Debug.Log("Saltito");
@@ -77,7 +101,7 @@ public class Movement : MonoBehaviour
 		/*apply speed forward*/
 		if (grounded)
 		{
-			moveDirection = transform.forward * Input.GetAxis("Vertical") * speed * sprintMultiplier;
+			moveDirection = transform.forward * Input.GetAxis("Vertical") * currentSpeed * sprintMultiplier;
 		}
 
 		float turn = Input.GetAxis("Horizontal");
@@ -85,5 +109,18 @@ public class Movement : MonoBehaviour
 		controller.Move(moveDirection * Time.deltaTime);
 		moveDirection.y -= gravity * Time.deltaTime;
 	}
+
+	void setSpeed()
+    {
+		//Acceleration
+		if (isMoving)
+		{
+			if (currentSpeed <= maxSpeed)
+			{
+				currentSpeed += accelPerSec * Time.deltaTime;
+			}
+        }
+        else { currentSpeed = 0; }
+    }
 }
 
