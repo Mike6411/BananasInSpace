@@ -20,7 +20,7 @@ public class Movement : MonoBehaviour
 	bool grounded;
 
 	[SerializeField]
-	float jumpHeight;
+	float jumpHeight = 10f;
 
 	[SerializeField]
 	float sprintMultiplier;
@@ -43,9 +43,8 @@ public class Movement : MonoBehaviour
 
 	void Update()
 	{
+		//Set Accel
 		setSpeed();
-
-		//Debug.Log(currentSpeed);
 
         /*Movement Checks*/
         if (Input.GetAxis("Vertical") != 0)
@@ -68,8 +67,14 @@ public class Movement : MonoBehaviour
 			grounded = false;
 		}
 
+		/*Crouch checks*/
+		if (Input.GetKey(KeyCode.LeftControl))
+        {
+			Debug.Log("crouch");
+        }
+
 		/*Anim Checks*/
-		if (Input.GetKey("w"))
+		if (Input.GetKey(KeyCode.W))
 		{
 			anim.SetInteger("AnimationPar", 1);
 		}
@@ -77,7 +82,7 @@ public class Movement : MonoBehaviour
 		{
 			anim.SetInteger("AnimationPar", 0);
 		}
-		if (Input.GetKey("left shift"))
+		if (Input.GetKey(KeyCode.LeftShift))
 		{
 			anim.SetInteger("AnimationPar", 2);
 			sprintMultiplier = 2;
@@ -86,10 +91,9 @@ public class Movement : MonoBehaviour
 			sprintMultiplier = 1;
         }
 
-		if (Input.GetKey("space"))
+		if (Input.GetKey(KeyCode.Space))
 		{
-			Debug.Log("Saltito");
-            //anim.SetInteger("AnimationPar", 3);
+            anim.SetInteger("AnimationPar", 3);
             if (grounded)
             {
 				moveDirection.y += Mathf.Sqrt(jumpHeight * -1.0f * gravity);
