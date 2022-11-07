@@ -91,14 +91,11 @@ public class Movement : MonoBehaviour
 			sprintMultiplier = 1;
         }
 
-		if (Input.GetKey(KeyCode.Space))
+		if (Input.GetKeyDown(KeyCode.Space))
 		{
-            anim.SetInteger("AnimationPar", 3);
-            if (grounded)
-            {
-				moveDirection.y += Mathf.Sqrt(jumpHeight * -1.0f * gravity);
-            }
+			Debug.Log("salto");
 
+			moveDirection.y = jumpHeight;
 		}
 
 
