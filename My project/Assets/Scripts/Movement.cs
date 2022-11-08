@@ -46,6 +46,8 @@ public class Movement : MonoBehaviour
 		//Set Accel
 		setSpeed();
 
+		grounded = controller.isGrounded;
+
         /*Movement Checks*/
         if (Input.GetAxis("Vertical") != 0)
         {
@@ -55,17 +57,6 @@ public class Movement : MonoBehaviour
         {
 			isMoving = false;
         }
-
-		/*Grounded Checks*/
-		if (controller.isGrounded)
-		{
-			grounded = true;
-			moveDirection = transform.forward * Input.GetAxis("Vertical") * currentSpeed;
-        }
-		if (controller.isGrounded == false)
-		{
-			grounded = false;
-		}
 
 		/*Crouch checks*/
 		if (Input.GetKey(KeyCode.LeftControl))
@@ -85,7 +76,7 @@ public class Movement : MonoBehaviour
 		if (Input.GetKey(KeyCode.LeftShift))
 		{
 			anim.SetInteger("AnimationPar", 2);
-			sprintMultiplier = 2;
+			sprintMultiplier = Mathf.Lerp( 0.1f, 2.0f, 1f);
 		}else
         {
 			sprintMultiplier = 1;
@@ -93,11 +84,10 @@ public class Movement : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
-			Debug.Log("salto");
-
+			grounded = false;
 			moveDirection.y = jumpHeight;
+			anim.SetInteger("AnimationPar", 3);
 		}
-
 
 		/*apply speed forward*/
 		if (grounded)
@@ -107,8 +97,12 @@ public class Movement : MonoBehaviour
 
 		float turn = Input.GetAxis("Horizontal");
 		transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
+
+		/*constant fall*/
+		//moveDirection.y -= gravity * Time.deltaTime;
+
 		controller.Move(moveDirection * Time.deltaTime);
-		moveDirection.y -= gravity * Time.deltaTime;
+
 	}
 
 	void setSpeed()
