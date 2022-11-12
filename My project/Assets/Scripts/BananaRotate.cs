@@ -12,6 +12,8 @@ public class BananaRotate : MonoBehaviour
     float rotation = 70f;
     [SerializeField]
     float length = 0.2f;
+    [SerializeField]
+    AudioSource coinFX;
 
     void Update()
     {

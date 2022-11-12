@@ -20,10 +20,13 @@ public class Movement : MonoBehaviour
 	bool grounded;
 
 	[SerializeField]
-	float jumpHeight = 10f;
+	float jumpHeight = 19.81f;
 
 	[SerializeField]
 	float sprintMultiplier;
+
+	[SerializeField]
+	int jumps;
 
 	/*[SerializeField]
 	float gravityMultiplier = 1f;*/
@@ -39,6 +42,7 @@ public class Movement : MonoBehaviour
 		accelPerSec = maxSpeed / zeroToMax;
 		controller = GetComponent<CharacterController>();
 		anim = gameObject.GetComponentInChildren<Animator>();
+		jumps = 3;
 	}
 
 	void Update()
@@ -48,6 +52,9 @@ public class Movement : MonoBehaviour
 
 		grounded = controller.isGrounded;
 
+		//Jump Refill
+        if (grounded){jumps = 3;}
+
         /*Movement Checks*/
         if (Input.GetAxis("Vertical") != 0)
         {
@@ -56,12 +63,6 @@ public class Movement : MonoBehaviour
 		else
         {
 			isMoving = false;
-        }
-
-		/*Crouch checks*/
-		if (Input.GetKey(KeyCode.LeftControl))
-        {
-			Debug.Log("crouch");
         }
 
 		/*Anim Checks*/
@@ -84,9 +85,14 @@ public class Movement : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
-			grounded = false;
-			moveDirection.y = jumpHeight;
-			anim.SetInteger("AnimationPar", 3);
+			if (jumps > 0)
+			{
+				grounded = false;
+				moveDirection.y = 0;
+				moveDirection.y = jumpHeight;
+				anim.SetInteger("AnimationPar", 3);
+				jumps--;
+			}
 		}
 
 		/*apply speed forward*/
@@ -98,8 +104,8 @@ public class Movement : MonoBehaviour
 		float turn = Input.GetAxis("Horizontal");
 		transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
 
-		/*constant fall*/
-		//moveDirection.y -= gravity * Time.deltaTime;
+	
+		moveDirection.y -= gravity * Time.deltaTime;
 
 		controller.Move(moveDirection * Time.deltaTime);
 
