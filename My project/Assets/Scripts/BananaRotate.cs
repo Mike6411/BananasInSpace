@@ -34,7 +34,7 @@ public class BananaRotate : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            LC.coins++;
+            LC.bananas++;
             coinFX.Play();
             this.gameObject.SetActive(false);
         }

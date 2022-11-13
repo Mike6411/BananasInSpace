@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelControler : MonoBehaviour
 {
     public Text CoinText;
-    public int coins;
+    public int bananas;
     public Movement movement;
 
     private void Start()
@@ -17,11 +17,16 @@ public class LevelControler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CoinText.text = "Bananas : " + coins;
+        CoinText.text = "Bananas : " + bananas;
 
         if (movement.respawn)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        if (bananas == 5) 
+        {
+            SceneManager.LoadScene("Victory");
         }
     }
 }

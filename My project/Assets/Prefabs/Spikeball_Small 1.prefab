@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7963917975637180591}
   - component: {fileID: 7963917975634280591}
   - component: {fileID: 7963917975635280463}
+  - component: {fileID: 7460751092620971071}
   m_Layer: 0
   m_Name: Spikeball_Small 1
   m_TagString: Enemy
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7460751092620971071
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7963917975637220495}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0416403, y: 2.063156, z: 2.0416403}
+  m_Center: {x: 0, y: 0, z: 0}
