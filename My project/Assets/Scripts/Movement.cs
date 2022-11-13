@@ -36,6 +36,7 @@ public class Movement : MonoBehaviour
 	float accelPerSec;
 	float currentSpeed;
 	bool isMoving;
+	public bool respawn;
 
 	void Start()
 	{
@@ -111,7 +112,15 @@ public class Movement : MonoBehaviour
 
 	}
 
-	void setSpeed()
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Enemy")
+        {
+			respawn = true;
+        }
+    }
+
+    void setSpeed()
     {
 		//Acceleration
 		if (isMoving)

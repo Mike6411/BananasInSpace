@@ -7,6 +7,9 @@ public class BananaRotate : MonoBehaviour
     /*Bananas Rotate*/
 
     [SerializeField]
+    LevelControler LC;
+
+    [SerializeField]
     float speedUpDown = 10f;
     [SerializeField]
     float rotation = 70f;
@@ -14,6 +17,11 @@ public class BananaRotate : MonoBehaviour
     float length = 0.2f;
     [SerializeField]
     AudioSource coinFX;
+
+    private void Start()
+    {
+        LC = GameObject.Find("LevelControler").GetComponent<LevelControler>();
+    }
 
     void Update()
     {
@@ -26,6 +34,7 @@ public class BananaRotate : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+            LC.coins++;
             coinFX.Play();
             this.gameObject.SetActive(false);
         }
