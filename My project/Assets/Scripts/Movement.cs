@@ -28,8 +28,8 @@ public class Movement : MonoBehaviour
 	[SerializeField]
 	int jumps;
 
-	/*[SerializeField]
-	float gravityMultiplier = 1f;*/
+	[SerializeField]
+	AudioSource jumpFX;
 
 	private Vector3 moveDirection = Vector3.zero;
 	float gravity = 9.81f;
@@ -86,6 +86,7 @@ public class Movement : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
+			jumpFX.Play();
 			if (jumps > 0)
 			{
 				grounded = false;

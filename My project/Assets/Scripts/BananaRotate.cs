@@ -8,13 +8,8 @@ public class BananaRotate : MonoBehaviour
 
     [SerializeField]
     LevelControler LC;
-
-    [SerializeField]
-    float speedUpDown = 10f;
     [SerializeField]
     float rotation = 70f;
-    [SerializeField]
-    float length = 0.2f;
     [SerializeField]
     AudioSource coinFX;
 
@@ -26,8 +21,8 @@ public class BananaRotate : MonoBehaviour
     void Update()
     {
         transform.Rotate(0, 0, rotation * Time.deltaTime);
-        float y = Mathf.PingPong(Time.time * speedUpDown, length);
-        transform.position = new Vector3( transform.position.x , y + 1, transform.position.z);
+        /*float updown = Mathf.PingPong(Time.time * speedUpDown, length);
+        transform.position = new Vector3( transform.position.x , transform.position.y + updown, transform.position.z);*/
     }
 
     private void OnTriggerEnter(Collider other)
