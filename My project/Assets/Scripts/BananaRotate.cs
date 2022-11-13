@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BananaRotate : MonoBehaviour
 {
-    /*Bananas Rotate*/
+    /*https://www.youtube.com/watch?v=2BrIPhuUxBQ*/ //mi inspiracion
 
     [SerializeField]
     LevelControler LC;
@@ -21,8 +21,6 @@ public class BananaRotate : MonoBehaviour
     void Update()
     {
         transform.Rotate(0, 0, rotation * Time.deltaTime);
-        /*float updown = Mathf.PingPong(Time.time * speedUpDown, length);
-        transform.position = new Vector3( transform.position.x , transform.position.y + updown, transform.position.z);*/
     }
 
     private void OnTriggerEnter(Collider other)

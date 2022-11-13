@@ -23,7 +23,6 @@ public class LevelControler : MonoBehaviour
         movement = GameObject.Find("Astronaut").GetComponent<Movement>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         CoinText.text = "Bananas : " + bananas;
@@ -36,6 +35,7 @@ public class LevelControler : MonoBehaviour
             bananas = 0;
         }
 
+        //Se que esto es raro pero si hago lo del Loadscene dentro del check de 50 bananas pues no me funciona
         if (bananas == 50) 
         {
             win = true;

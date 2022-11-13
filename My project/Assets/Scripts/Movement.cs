@@ -48,7 +48,6 @@ public class Movement : MonoBehaviour
 
 	void Update()
 	{
-		//Set Accel
 		setSpeed();
 
 		grounded = controller.isGrounded;
@@ -84,8 +83,10 @@ public class Movement : MonoBehaviour
 			sprintMultiplier = 1;
         }
 
+
 		if (Input.GetKeyDown(KeyCode.Space))
 		{
+			//no se porque sale con delay 
 			jumpFX.Play();
 			if (jumps > 0)
 			{
@@ -108,12 +109,11 @@ public class Movement : MonoBehaviour
 
 	
 		moveDirection.y -= gravity * Time.deltaTime;
-
 		controller.Move(moveDirection * Time.deltaTime);
 
 	}
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Enemy")
         {
@@ -121,9 +121,9 @@ public class Movement : MonoBehaviour
         }
     }
 
-    void setSpeed()
+	//Acceleration
+	void setSpeed()
     {
-		//Acceleration
 		if (isMoving)
 		{
 			if (currentSpeed <= maxSpeed)

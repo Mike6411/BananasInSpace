@@ -340,9 +340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &34994683
 BoxCollider:
@@ -556,9 +554,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &80039668
 BoxCollider:
@@ -1309,9 +1305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &247985677
 BoxCollider:
@@ -1536,7 +1530,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1643152096}
     m_Modifications:
     - target: {fileID: 1121113006719782, guid: 386f40ad68cdd3c4fbcb471ef2d93772, type: 3}
       propertyPath: m_Name
@@ -1544,7 +1538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4519282631701236, guid: 386f40ad68cdd3c4fbcb471ef2d93772, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4519282631701236, guid: 386f40ad68cdd3c4fbcb471ef2d93772, type: 3}
       propertyPath: m_LocalScale.x
@@ -1552,15 +1546,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4519282631701236, guid: 386f40ad68cdd3c4fbcb471ef2d93772, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.78
+      value: 45.00079
       objectReference: {fileID: 0}
     - target: {fileID: 4519282631701236, guid: 386f40ad68cdd3c4fbcb471ef2d93772, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.4470749
+      value: -41.91551
       objectReference: {fileID: 0}
     - target: {fileID: 4519282631701236, guid: 386f40ad68cdd3c4fbcb471ef2d93772, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -35.27
+      value: 7.194378
       objectReference: {fileID: 0}
     - target: {fileID: 4519282631701236, guid: 386f40ad68cdd3c4fbcb471ef2d93772, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1568,7 +1562,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4519282631701236, guid: 386f40ad68cdd3c4fbcb471ef2d93772, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4519282631701236, guid: 386f40ad68cdd3c4fbcb471ef2d93772, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1611,6 +1605,11 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 7d1c542ac0453aa40a248ffb042193c2, type: 3}
+--- !u!4 &283073589 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4519282631701236, guid: 386f40ad68cdd3c4fbcb471ef2d93772, type: 3}
+  m_PrefabInstance: {fileID: 283073586}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &286873845
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1691,9 +1690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &286873849
 BoxCollider:
@@ -1788,9 +1785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &293733409
 BoxCollider:
@@ -1885,9 +1880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &298989791
 BoxCollider:
@@ -2336,9 +2329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &381404731
 BoxCollider:
@@ -2480,9 +2471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &413628075
 BoxCollider:
@@ -2502,7 +2491,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1643152096}
     m_Modifications:
     - target: {fileID: 1275909538635612, guid: 2767c12992d890f44b14f433fe854668, type: 3}
       propertyPath: m_Name
@@ -2510,7 +2499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4422725698349158, guid: 2767c12992d890f44b14f433fe854668, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 4422725698349158, guid: 2767c12992d890f44b14f433fe854668, type: 3}
       propertyPath: m_LocalScale.x
@@ -2518,15 +2507,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4422725698349158, guid: 2767c12992d890f44b14f433fe854668, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.77
+      value: 44.99079
       objectReference: {fileID: 0}
     - target: {fileID: 4422725698349158, guid: 2767c12992d890f44b14f433fe854668, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.02
+      value: -42.342583
       objectReference: {fileID: 0}
     - target: {fileID: 4422725698349158, guid: 2767c12992d890f44b14f433fe854668, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12.84
+      value: 55.30438
       objectReference: {fileID: 0}
     - target: {fileID: 4422725698349158, guid: 2767c12992d890f44b14f433fe854668, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2577,6 +2566,11 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 3ad660daf3a1e02458b9f3eca418861a, type: 3}
+--- !u!4 &423953316 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4422725698349158, guid: 2767c12992d890f44b14f433fe854668, type: 3}
+  m_PrefabInstance: {fileID: 423953313}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &423991711 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7963917975637180591, guid: 51ce546b697037c47b8d934cee971e47, type: 3}
@@ -2719,9 +2713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &430657496
 BoxCollider:
@@ -3324,9 +3316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!1001 &528390285
 PrefabInstance:
@@ -3478,9 +3468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &539023186
 BoxCollider:
@@ -3752,7 +3740,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &591094577
 GameObject:
@@ -3824,7 +3812,7 @@ Transform:
   - {fileID: 368924056}
   - {fileID: 972342563}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &597494589
 PrefabInstance:
@@ -4431,9 +4419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &703606917
 BoxCollider:
@@ -4540,7 +4526,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &712232626 stripped
 GameObject:
@@ -4759,7 +4745,7 @@ Transform:
   - {fileID: 953540809}
   - {fileID: 1000612347}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &737879655
 MonoBehaviour:
@@ -4776,6 +4762,7 @@ MonoBehaviour:
   CoinText: {fileID: 556190095}
   bananas: 0
   movement: {fileID: 0}
+  win: 0
   deathFX: {fileID: 953540810}
 --- !u!1 &741602828 stripped
 GameObject:
@@ -4928,9 +4915,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &770444726
 BoxCollider:
@@ -5152,9 +5137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &794927356
 BoxCollider:
@@ -5249,9 +5232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &796213553
 BoxCollider:
@@ -5849,9 +5830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &877541303
 BoxCollider:
@@ -6003,9 +5982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &889337970
 BoxCollider:
@@ -6111,7 +6088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4003897846794392, guid: cd87e5026d1695148aabe96121c526ef, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -41.752586
+      value: -42.81
       objectReference: {fileID: 0}
     - target: {fileID: 4003897846794392, guid: cd87e5026d1695148aabe96121c526ef, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6342,9 +6319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!1 &953540808
 GameObject:
@@ -6390,7 +6365,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 840b3ae28b3773e4d8dcb537eba5fc32, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.4
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6972,13 +6947,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cd97337de60d73942bd7a6ef2858c7ff, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.4
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 256
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -7136,9 +7111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1025646065
 BoxCollider:
@@ -7634,9 +7607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1078672005
 BoxCollider:
@@ -7848,9 +7819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1118755409
 BoxCollider:
@@ -7945,9 +7914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1119859646
 BoxCollider:
@@ -8089,9 +8056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1154005991
 BoxCollider:
@@ -8186,6 +8151,7 @@ Transform:
   - {fileID: 1597124120}
   - {fileID: 1534677015}
   - {fileID: 1118755406}
+  - {fileID: 1852225531}
   m_Father: {fileID: 1376427515}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8326,9 +8292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1164701071
 BoxCollider:
@@ -8428,9 +8392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1175694214
 BoxCollider:
@@ -8525,9 +8487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1179589990
 BoxCollider:
@@ -8622,9 +8582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1196649509
 BoxCollider:
@@ -8742,9 +8700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1199904566
 BoxCollider:
@@ -9051,9 +9007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1255605480
 BoxCollider:
@@ -9547,9 +9501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!4 &1363807448 stripped
 Transform:
@@ -9636,9 +9588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1369651527
 BoxCollider:
@@ -9685,7 +9635,7 @@ Transform:
   - {fileID: 1473803776}
   - {fileID: 1157087913}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1386844187
 PrefabInstance:
@@ -9964,9 +9914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1407568905
 BoxCollider:
@@ -10061,9 +10009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1420758656
 BoxCollider:
@@ -10309,9 +10255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1440904420
 BoxCollider:
@@ -10364,7 +10308,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7963917975637180591, guid: 51ce546b697037c47b8d934cee971e47, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7963917975637180591, guid: 51ce546b697037c47b8d934cee971e47, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10492,9 +10436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1470735105
 BoxCollider:
@@ -10696,9 +10638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1534677018
 BoxCollider:
@@ -10793,9 +10733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1535250811
 BoxCollider:
@@ -10947,9 +10885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1552810370
 BoxCollider:
@@ -11109,9 +11045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1566794200
 BoxCollider:
@@ -11206,9 +11140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1584157853
 BoxCollider:
@@ -11331,9 +11263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1597124123
 BoxCollider:
@@ -11588,7 +11518,7 @@ RectTransform:
   m_Children:
   - {fileID: 556190094}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -11733,6 +11663,8 @@ Transform:
   - {fileID: 802290608}
   - {fileID: 1386844188}
   - {fileID: 338342667}
+  - {fileID: 283073589}
+  - {fileID: 423953316}
   m_Father: {fileID: 1376427515}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11971,9 +11903,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1701575445
 BoxCollider:
@@ -12133,9 +12063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1709820794
 BoxCollider:
@@ -12186,9 +12114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!1001 &1713432196
 PrefabInstance:
@@ -12673,6 +12599,101 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 16c4b1c9bf28bc44eab122106a0e4864, type: 3}
+--- !u!1001 &1852225530
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1157087913}
+    m_Modifications:
+    - target: {fileID: 1407451490957870, guid: 3ce32ffa6ccf60e4ab65d9e396f43433, type: 3}
+      propertyPath: m_Name
+      value: banana (53)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237270380712220, guid: 3ce32ffa6ccf60e4ab65d9e396f43433, type: 3}
+      propertyPath: m_RootOrder
+      value: 52
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237270380712220, guid: 3ce32ffa6ccf60e4ab65d9e396f43433, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 54.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237270380712220, guid: 3ce32ffa6ccf60e4ab65d9e396f43433, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 42.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237270380712220, guid: 3ce32ffa6ccf60e4ab65d9e396f43433, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -47.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237270380712220, guid: 3ce32ffa6ccf60e4ab65d9e396f43433, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237270380712220, guid: 3ce32ffa6ccf60e4ab65d9e396f43433, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237270380712220, guid: 3ce32ffa6ccf60e4ab65d9e396f43433, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237270380712220, guid: 3ce32ffa6ccf60e4ab65d9e396f43433, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237270380712220, guid: 3ce32ffa6ccf60e4ab65d9e396f43433, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237270380712220, guid: 3ce32ffa6ccf60e4ab65d9e396f43433, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4237270380712220, guid: 3ce32ffa6ccf60e4ab65d9e396f43433, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3ce32ffa6ccf60e4ab65d9e396f43433, type: 3}
+--- !u!4 &1852225531 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4237270380712220, guid: 3ce32ffa6ccf60e4ab65d9e396f43433, type: 3}
+  m_PrefabInstance: {fileID: 1852225530}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1852225532 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1407451490957870, guid: 3ce32ffa6ccf60e4ab65d9e396f43433, type: 3}
+  m_PrefabInstance: {fileID: 1852225530}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1852225533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852225532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 732efac38f64ff14aa61f3e4a280885b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LC: {fileID: 0}
+  rotation: 70
+  coinFX: {fileID: 1048803942}
+--- !u!65 &1852225534
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852225532}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.014319026, y: 0.010550379, z: 0.014842814}
+  m_Center: {x: -0.001269291, y: 0.0009908592, z: 0}
 --- !u!1001 &1852633076
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12984,9 +13005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1880420818
 BoxCollider:
@@ -13644,9 +13663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1970125516
 BoxCollider:
@@ -13741,9 +13758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &1973318654
 BoxCollider:
@@ -14030,9 +14045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &2026775269
 BoxCollider:
@@ -14286,9 +14299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &2079415373
 BoxCollider:
@@ -14464,9 +14475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &2096068956
 BoxCollider:
@@ -14618,9 +14627,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LC: {fileID: 0}
-  speedUpDown: 0.2
   rotation: 70
-  length: 0.2
   coinFX: {fileID: 1048803942}
 --- !u!65 &2109614066
 BoxCollider:
@@ -14862,7 +14869,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 228648002744408681, guid: 9454823d98a3f8b429fb626048a06d6e, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 228648002744408681, guid: 9454823d98a3f8b429fb626048a06d6e, type: 3}
       propertyPath: m_LocalPosition.x
