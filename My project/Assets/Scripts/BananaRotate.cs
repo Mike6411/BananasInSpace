@@ -26,7 +26,8 @@ public class BananaRotate : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            Destroy(this.gameObject);
+            coinFX.Play();
+            this.gameObject.SetActive(false);
         }
     }
 }
