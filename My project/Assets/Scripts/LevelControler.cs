@@ -13,7 +13,7 @@ public class LevelControler : MonoBehaviour
     public Movement movement;
 
     [SerializeField]
-    bool win;
+    public bool win;
 
     [SerializeField]
     AudioSource deathFX;
@@ -33,12 +33,6 @@ public class LevelControler : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             movement.respawn = false;
             bananas = 0;
-        }
-
-        //Se que esto es raro pero si hago lo del Loadscene dentro del check de 50 bananas pues no me funciona
-        if (bananas == 50) 
-        {
-            win = true;
         }
 
         if (win) { SceneManager.LoadScene("Victory"); }

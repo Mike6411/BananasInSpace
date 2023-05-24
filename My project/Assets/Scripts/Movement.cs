@@ -32,10 +32,10 @@ public class Movement : MonoBehaviour
 	AudioSource jumpFX;
 
 	private Vector3 moveDirection = Vector3.zero;
-	float gravity = 9.81f;
-	float accelPerSec;
-	float currentSpeed;
-	bool isMoving;
+    private float gravity = 9.81f;
+    private float accelPerSec;
+    private float currentSpeed;
+    private bool isMoving;
 	public bool respawn;
 
 	void Start()
@@ -122,7 +122,7 @@ public class Movement : MonoBehaviour
     }
 
 	//Acceleration
-	void setSpeed()
+	private void setSpeed()
     {
 		if (isMoving)
 		{

@@ -31,5 +31,10 @@ public class BananaRotate : MonoBehaviour
             coinFX.Play();
             this.gameObject.SetActive(false);
         }
+
+        if (LC.bananas == 50)
+        {
+            LC.win = true;
+        }
     }
 }
