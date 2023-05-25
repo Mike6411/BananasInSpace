@@ -7,9 +7,13 @@ public class AnimsScript : MonoBehaviour
 {
     private Animator anim;
 
+    private PlayerMovement playerMovement;
+
+    private string playerGameobjectName = "New Astronaut";
 
     private void Start()
     {
+        playerMovement = GameObject.Find(playerGameobjectName).GetComponent<PlayerMovement>();
         anim = gameObject.GetComponentInChildren<Animator>();
     }
 
@@ -31,7 +35,7 @@ public class AnimsScript : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && playerMovement.jumpCount != 0)
         {
             anim.SetInteger("AnimationPar", 3);
         }

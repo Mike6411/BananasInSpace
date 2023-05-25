@@ -16,9 +16,6 @@ public class LevelControler : MonoBehaviour
     [SerializeField]
     public bool win;
 
-    [SerializeField]
-    AudioSource deathFX;
-
     private void Start()
     {
         movement = GameObject.Find(playerGameobjectName).GetComponent<PlayerMovement>();
@@ -30,7 +27,6 @@ public class LevelControler : MonoBehaviour
 
         if (movement.respawn)
         {
-            deathFX.Play();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             movement.respawn = false;
             bananas = 0;
