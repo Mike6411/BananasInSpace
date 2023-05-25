@@ -50,8 +50,11 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetButtonDown("Jump")) rb.velocity = new Vector3(rb.velocity.x, jumpHeight, rb.velocity.z);
 
+
+        if (rb.velocity.x > 0f || rb.velocity.z > 0f) { 
         transform.forward = new Vector3(rb.velocity.x, 0 , rb.velocity.z);
-    }
+        }
+}
 
     void OnTriggerEnter(Collider other)
     {
