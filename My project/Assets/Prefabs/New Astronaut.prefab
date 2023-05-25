@@ -871,8 +871,8 @@ GameObject:
   m_Component:
   - component: {fileID: 228648002744408681}
   - component: {fileID: 228648002744408680}
-  - component: {fileID: 228648002744408683}
   - component: {fileID: 228648002744408686}
+  - component: {fileID: 7030370342374542247}
   m_Layer: 0
   m_Name: New Astronaut
   m_TagString: Player
@@ -909,25 +909,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 4, z: 3}
   m_Center: {x: 0, y: 0, z: -0.5}
---- !u!114 &228648002744408683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 228648002744408682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6152f48cdd6d32469d26d68dd23f094, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxSpeed: 7
-  zeroToMax: 0.5
-  turnSpeed: 150
-  grounded: 0
-  jumpHeight: 10
-  sprintMultiplier: 1.5
-  jumps: 0
 --- !u!143 &228648002744408686
 CharacterController:
   m_ObjectHideFlags: 0
@@ -946,6 +927,18 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: -0.1, y: 0, z: -0.5}
+--- !u!114 &7030370342374542247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228648002744408682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f7610b152b32f14cabee5b762fbd5e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &229570616081199073
 GameObject:
   m_ObjectHideFlags: 0
