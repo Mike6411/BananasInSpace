@@ -13,7 +13,7 @@ public class BananaRotate : MonoBehaviour
     [SerializeField]
     AudioSource coinFX;
     [SerializeField]
-    private float bananasToWin = 40;
+    private float bananasToWin = 50;
 
     private void Start()
     {

@@ -29,6 +29,19 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Movement();
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Enemy")
+        {
+            respawn = true;
+        }
+    }
+
+    private void Movement()
+    {
         //Inputs
         float horInput = Input.GetAxisRaw("Horizontal") * moveSpeed;
         float verInput = Input.GetAxisRaw("Vertical") * moveSpeed;
@@ -48,19 +61,12 @@ public class PlayerMovement : MonoBehaviour
 
         rb.velocity = new Vector3(moveDir.x, rb.velocity.y, moveDir.z);
 
-        if(Input.GetButtonDown("Jump")) rb.velocity = new Vector3(rb.velocity.x, jumpHeight, rb.velocity.z);
+        if (Input.GetButtonDown("Jump")) rb.velocity = new Vector3(rb.velocity.x, jumpHeight, rb.velocity.z);
 
-
-        if (rb.velocity.x > 0f || rb.velocity.z > 0f) { 
-        transform.forward = new Vector3(rb.velocity.x, 0 , rb.velocity.z);
-        }
-}
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Enemy")
+        //Que se quede mirando hacia donde estaba mirando
+        if (rb.velocity.x != 0f || rb.velocity.z != 0f)
         {
-            respawn = true;
+            transform.forward = new Vector3(rb.velocity.x, 0, rb.velocity.z);
         }
     }
 
