@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 public class LevelControler : MonoBehaviour
 {
     public Text CoinText;
+    public PlayerMovement movement;
+
+    private string playerGameobjectName = "New Astronaut";
 
     [SerializeField]
     public int bananas;
-
-    public Movement movement;
 
     [SerializeField]
     public bool win;
@@ -20,7 +21,7 @@ public class LevelControler : MonoBehaviour
 
     private void Start()
     {
-        movement = GameObject.Find("Astronaut").GetComponent<Movement>();
+        movement = GameObject.Find(playerGameobjectName).GetComponent<PlayerMovement>();
     }
 
     void Update()

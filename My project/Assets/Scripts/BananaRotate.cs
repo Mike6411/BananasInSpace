@@ -9,9 +9,11 @@ public class BananaRotate : MonoBehaviour
     [SerializeField]
     LevelControler LC;
     [SerializeField]
-    float rotation = 70f;
+    private float rotation = 70f;
     [SerializeField]
     AudioSource coinFX;
+    [SerializeField]
+    private float bananasToWin = 40;
 
     private void Start()
     {
@@ -32,7 +34,7 @@ public class BananaRotate : MonoBehaviour
             this.gameObject.SetActive(false);
         }
 
-        if (LC.bananas == 50)
+        if (LC.bananas == bananasToWin)
         {
             LC.win = true;
         }

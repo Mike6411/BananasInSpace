@@ -17,7 +17,7 @@ public class AnimsScript : MonoBehaviour
     void Update()
     {
         /*Anim Checks*/
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A))
         {
             anim.SetInteger("AnimationPar", 1);
         }
